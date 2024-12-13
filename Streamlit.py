@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 from pinecone import Pinecone
 import openai
 
+# Load environment variables from the .env file
+load_dotenv()
 
 # Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
