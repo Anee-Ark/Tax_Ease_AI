@@ -20,9 +20,7 @@ openai_api_key = st.secrets["OPENAI_API_KEY"]
 pc = Pinecone(api_key=pinecone_api_key)
 openai.api_key = openai_api_key
 
-# Print to verify that the API keys are being accessed correctly
-st.write(f"OpenAI API Key: {openai.api_key}")
-st.write(f"Pinecone API Key: {pinecone_api_key}")
+
 
 # Connect to the "taxease" index
 index = pc.Index("taxease")
