@@ -1,13 +1,8 @@
-import os
 import streamlit as st
 from streamlit_chat import message
 import pinecone
-from dotenv import load_dotenv
 from pinecone import Pinecone
 import openai
-
-# Load environment variables from the .env file
-load_dotenv()
 
 # Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
@@ -39,9 +34,6 @@ def get_response(query):
     except Exception as e:
         return f"Sorry, an error occurred: {str(e)}"
 
-
-
-
 def generate_embeddings(texts):
     """Generate embeddings using OpenAI's `text-embedding-ada-002`."""
     response = openai.Embedding.create(
@@ -66,18 +58,13 @@ def query_pinecone(query):
     # Return the retrieved results
     return results["matches"]
 
-
-
 def generate_response_with_rag(query, retrieved_results):
-
     # Introductory context
-
     introductory_prompt = (
-    "   Hi Taxease, you are an assistant who helps users navigate the tax filing process. "
+        "Hi TaxEase, you are an assistant who helps users navigate the tax filing process. "
         "The chatbot should be able to answer questions, provide guidance on filling out the tax form, "
         "and offer suggestions for deductions or credits the user may be eligible for. "
         "The chatbot should use natural language processing to understand user queries and respond in a conversational way. "
-
     )
 
     # Retrieved context
@@ -89,7 +76,6 @@ def generate_response_with_rag(query, retrieved_results):
         {"role": "user", "content": f"Context:\n{context}\n\nQuery: {query}\n\nAnswer:"}
     ]
 
-
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",  # Or "gpt-4" for higher quality
         messages=messages,
@@ -98,8 +84,6 @@ def generate_response_with_rag(query, retrieved_results):
     )
 
     return response["choices"][0]["message"]["content"].strip()
-
-
 
 # Title for the chatbot app
 st.title("TaxEase AI Chatbot")
