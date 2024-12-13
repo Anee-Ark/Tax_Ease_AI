@@ -14,7 +14,7 @@ st.markdown(
         }
     </style>
     <div class="center-logo">
-        <img src="https://d.img.vision/chandu/Screenshot_2024-12-13_at_6.33.14_PM.png" width="200">
+        <img src="https://d.img.vision/chandu/Screenshot_2024-12-13_at_6.40.53_PM.png" width="200">
     </div>
     """,
     unsafe_allow_html=True
