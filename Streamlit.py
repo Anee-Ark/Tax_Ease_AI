@@ -4,6 +4,9 @@ import pinecone
 from pinecone import Pinecone
 import openai
 
+# Display Logo at the top of the page
+st.image("https://d.img.vision/chandu/Screenshot_2024-12-13_at_6.33.14_PM.png", width=200)  # Adjust the width as needed
+
 # Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
 openai_api_key = st.secrets["OPENAI_API_KEY"]
