@@ -8,22 +8,17 @@ from pinecone import Pinecone
 # Load environment variables from the .env file
 load_dotenv()
 
-# Retrieve API keys from the environment
-OPENAI_KEY = os.getenv("OPENAI_API_KEY")
-PINECONE_KEY = os.getenv("PINECONE_KEY")
-print(f"OpenAI API Key: {OPENAI_KEY}")
-print(f"PINECONE_KEY: {PINECONE_KEY}")
+# Access the API keys from Streamlit secrets
+pinecone_api_key = st.secrets["PINECONE_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
+# Initialize Pinecone and OpenAI with the secrets
+pc = pinecone.Pinecone(api_key=pinecone_api_key)
+openai.api_key = openai_api_key
 
-# Load environment variables from .env file
-load_dotenv()
-
-# Get the Pinecone API key from the environment
-pinecone_api_key = os.getenv("PINECONE_KEY")
-
-# Initialize the Pinecone client using the API key from environment variable
-pc = Pinecone(api_key=pinecone_api_key)
-print(pinecone_api_key)
+# Print to verify that the API keys are being accessed correctly
+st.write(f"OpenAI API Key: {openai.api_key}")
+st.write(f"Pinecone API Key: {pinecone_api_key}")
 
 # Connect to the "taxease" index
 index = pc.Index("taxease")
