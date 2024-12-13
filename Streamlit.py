@@ -10,8 +10,6 @@ import openai
 # Load environment variables from the .env file
 load_dotenv()
 
-# Print the available secrets for debugging purposes
-st.write(st.secrets)
 
 # Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
