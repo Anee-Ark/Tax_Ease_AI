@@ -19,7 +19,7 @@ st.write(f"Pinecone API Key: {pinecone_api_key}")
 st.write(f"OpenAI API Key: {openai_api_key}")
 
 # Initialize Pinecone and OpenAI with the secrets
-pc = pinecone.Pinecone(api_key=pinecone_api_key)
+pc = Pinecone(api_key=pinecone_api_key)
 openai.api_key = openai_api_key
 
 # Print to verify that the API keys are being accessed correctly
