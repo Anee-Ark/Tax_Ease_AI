@@ -14,7 +14,6 @@ load_dotenv()
 st.write(st.secrets)
 
 # Access the specific secrets
-[pinecone_section]
 pinecone_api_key = st.secrets[pinecone_key]["PINECONE_KEY"]
 openai_api_key = st.secrets[open_ai]["OPENAI_API_KEY"]
 
