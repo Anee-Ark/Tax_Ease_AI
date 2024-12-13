@@ -5,7 +5,20 @@ from pinecone import Pinecone
 import openai
 
 # Display Logo at the top of the page
-st.image("https://d.img.vision/chandu/Screenshot_2024-12-13_at_6.40.53_PM.png", width=200)  # Adjust the width as needed
+st.markdown(
+    """
+    <style>
+        .center-logo {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <div class="center-logo">
+        <img src="https://d.img.vision/chandu/Screenshot_2024-12-13_at_6.33.14_PM.png" width="200">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
