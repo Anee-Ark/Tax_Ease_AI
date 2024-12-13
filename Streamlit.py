@@ -4,6 +4,8 @@ from streamlit_chat import message
 import pinecone
 from dotenv import load_dotenv
 from pinecone import Pinecone
+import openai
+
 
 # Load environment variables from the .env file
 load_dotenv()
