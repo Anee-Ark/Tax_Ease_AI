@@ -7,20 +7,13 @@ from pinecone import Pinecone
 import openai
 
 
-# Load environment variables from the .env file
-load_dotenv()
-
-
 # Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 
-
 # Initialize Pinecone and OpenAI with the secrets
 pc = Pinecone(api_key=pinecone_api_key)
 openai.api_key = openai_api_key
-
-
 
 # Connect to the "taxease" index
 index = pc.Index("taxease")
