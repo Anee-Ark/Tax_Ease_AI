@@ -51,8 +51,7 @@ def get_response(query):
         return f"Sorry, an error occurred: {str(e)}"
 
 
-# Set your OpenAI API key
-openai.api_key = openai_api_key
+
 
 def generate_embeddings(texts):
     """Generate embeddings using OpenAI's `text-embedding-ada-002`."""
