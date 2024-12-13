@@ -8,9 +8,15 @@ from pinecone import Pinecone
 # Load environment variables from the .env file
 load_dotenv()
 
-# Access the API keys from Streamlit secrets
+# Print the available secrets for debugging purposes
+st.write(st.secrets)
+
+# Access the specific secrets
 pinecone_api_key = st.secrets["PINECONE_KEY"]
 openai_api_key = st.secrets["OPENAI_API_KEY"]
+
+st.write(f"Pinecone API Key: {pinecone_api_key}")
+st.write(f"OpenAI API Key: {openai_api_key}")
 
 # Initialize Pinecone and OpenAI with the secrets
 pc = pinecone.Pinecone(api_key=pinecone_api_key)
