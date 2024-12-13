@@ -116,7 +116,7 @@ st.sidebar.info(
 )
 
 # Sidebar for clearing chat
-if st.sidebar.button("Clear Chat"):
+if st.sidebar.button("Want a Different Response?"):
     st.session_state.messages = [
         {"role": "system", "content": "Welcome! I am TaxEase AI, your tax assistant. How can I help you today?"}
     ]
