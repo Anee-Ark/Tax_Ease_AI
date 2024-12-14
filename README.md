@@ -76,7 +76,7 @@ TaxEase AI addresses these pain points by providing:
 
 ## **Architecture Diagram**
 
-![AI-Powered Tax Assistant Architecture](https://github.com/Poornachandra77/Tax_Ease_AI/blob/main/updated_tax_assistant_architecture%20(1).png)
+![AI-Powered Tax Assistant Architecture](https://github.com/Poornachandra77/Tax_Ease_AI/blob/main/architecture%20design%20(1).png)
 
 ---
 
