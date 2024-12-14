@@ -1,8 +1,13 @@
+
 # **TaxEase AI: Your AI-Powered Tax Assistant**
 
 **TaxEase AI** is an advanced conversational assistant designed to streamline the tax filing process for users. By combining state-of-the-art AI technologies like OpenAI's GPT-4, Pinecone Vector Database, and LangChain, TaxEase AI provides personalized, real-time assistance in navigating tax forms, retrieving documents, and identifying potential deductions and credits.
 
 ---
+# [🚀 TaxEase AI Chatbot Deployment](https://taxeaseai-fb4rgyfyxb8yksawyhhfvx.streamlit.app/#taxease-ai-chatbot)
+Access the live deployment of the TaxEase AI Chatbot by clicking the link above.
+
+
 
 ## **Technologies Used**
 
